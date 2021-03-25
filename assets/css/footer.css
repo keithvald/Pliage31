@@ -1,0 +1,16 @@
+/*Styling of the bottom page only*/ :root {
+  --first-theme-color: #036cb0; /*Lighter blue of the three*/
+  --second-theme-color: #035483;
+  --third-theme-color: #033651; /*Darkest blue of the three*/
+  --footer-color: #3d3d3d;
+}
+footer {
+  background-color: var(--footer-color);
+  color: white;
+  bottom: 0;
+}
+footer img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}

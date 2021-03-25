@@ -1,0 +1,328 @@
+/*Styling of varibale content in pages*/
+/*See header.css to style the navbar*/
+/*See footer.css to style the page's bottom*/
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+@font-face{
+	font-family: "Earth";
+	src: url('../fonts/earthorbiter.ttf');
+}
+
+:root{
+  --first-theme-color: #036cb0; /*Lighter blue of the three*/
+  --second-theme-color: #035483;
+  --third-theme-color:  #033651; /*Darkest blue of the three*/
+  --font-theme-color: black;
+  --footer-color: #3d3d3d;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Advent Pro', sans-serif;
+
+}
+body {
+/*background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(3,108,176,1) 77%, rgba(61,61,61,1) 95%);*/
+	background-color: var(--third-theme-color);
+
+}
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/****************************/
+/**********SLIDESHOW*********/
+/****************************/
+.carousel {
+	max-width: 1600px;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;	
+}
+.carousel-inner {
+		border-radius: 10px;
+}
+.carousel-item > img {
+	max-height: 400px;
+	object-fit: cover;
+}
+@media (max-width: 900px) {
+	.carousel {
+		width: 100%;
+		height: auto;
+	}
+	.carousel-item > img {
+	max-height: 200px;
+	object-fit: cover;
+	}
+	.main-text h1, .main-text h3{
+		font-size: 1.4em;
+		}
+}
+/****************************/
+/**STATIC CAPTION SLIDESHOW**/
+/****************************/
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    color: white;
+	background-color: rgba(0,0,0,0.50);
+}
+.btn-min-block
+{
+    min-width: 170px;
+    line-height: 26px;
+}
+.btn-clear
+{
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+    margin-right: 15px;
+}
+.btn-clear:hover
+{
+    color: #000;
+    background-color: #FFF;
+}
+
+
+
+
+.savoirfaire, .apropos {
+	background-color: white;
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.75);
+	color: black;
+}
+
+.gné {
+	font-family: 'Earth', sans-serif;
+	color: black;
+
+}
+/****************************/
+/**********CARD DECK*********/
+/****************************/
+.content-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.news-card {
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+  flex: 1;
+  min-width: 240px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+.news-card a {
+	color:white;
+}
+
+@media (min-width: 900px) {
+
+.news-card {
+    height: 20rem
+}
+  }
+
+.news-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+.news-card__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+/*     background: rgba(255,0,0,.5); */
+  }
+
+.news-card__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 3s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    z-index: -1;
+  }
+@media all and (max-width: 767px) {
+    .news-card {
+        height: 19rem;
+    }
+}
+.news-card__text-wrapper {
+    position: absolute;
+    bottom: 0rem;
+    padding: 1rem;
+    color: var(--second-theme-color);
+/*     background-color: rgba(0, 0, 0, 0.4); */
+    transition: background-color 1.5s ease;
+			width: 100%;
+
+  }
+
+.news-card__title {
+    transition: color 1s ease;
+    margin-bottom: .5rem;
+	font-size: 1.5em;
+	text-align: center;
+  }
+
+
+
+
+    .news-card .news-card__details-wrapper {
+      max-height: 20rem;
+      opacity: 1;
+    }
+    .news-card .news-card__text-wrapper {
+      background-color: rgba(255, 255, 255, 0.7);
+				width: 100%;
+
+    }
+    .news-card .news-card__title {
+      color: var(--first-theme-color);
+    }
+    .news-card:hover .news-card__image {
+      transform: scale(1.2);
+      z-index: -1;
+    }
+
+
+.news-card__excerpt {
+    font-weight: 300;
+  }
+
+.news-card__read-more {
+    background: var(--first-theme-color);
+    color: white;
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    border: 1px solid #444;
+    font-size: 0.8rem;
+	font-weight: bold;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-decoration: none;
+    width: 7rem;
+    margin-left: auto;
+    position: relative;
+    z-index: 5;
+  }
+
+.news-card__read-more i {
+      position: relative;
+      left: 0.2rem;
+      color: #888;
+      transition: left 0.5s ease, color 0.6s ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+.news-card__read-more:hover i {
+      left: 0.5rem;
+      color: black;
+    }
+
+/*--------------------------TITLE----------------------*/
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.savoirfaire {
+  background-color: white;
+  padding: 10px;
+
+  color: white;
+}
+/*--------------------------SURMESURE----------------------*/
+.jumbotron {
+	background-color: white;
+	border-radius: 0px;
+	padding: 1vw;
+}
+.surmesure {
+	padding: 0;
+}
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+.btn-primary {
+	font-size: 1.1em;
+	background-color: var(--first-theme-color);
+}
+/*--------------------------WHO----------------------*/
+
+
+.apropos img
+{
+  border: none;
+  border-radius: 20px;
+}
+
+.apropos p
+{
+  color: var(--font-theme-color);
+}
+
+.apropos .btn
+{
+  font-family: 'Earth', sans-serif;
+  background-color: var(--font-theme-color);
+  border: none;
+  -webkit-box-shadow: 10px 4px 15px 2px #3F3F3F; 
+  box-shadow: 10px 4px 15px 2px #3F3F3F;
+  font-weight: lighter;
+  font-size: 0.9em;
+  padding: 0.75rem 0.40rem;
+}
+
+/*--------------------------MAP+US----------------------*/
+
+#map { 
+	height: 300px;
+	width: 100%;
+	border-radius: 20px;
+}
+.leaflet-popup-content {
+	width: 300px;
+}

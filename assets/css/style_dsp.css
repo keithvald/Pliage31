@@ -1,0 +1,240 @@
+/*Styling of varibale content in pages*/
+/*See header.css to style the navbar*/
+/*See footer.css to style the page's bottom*/
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+@font-face{
+  font-family: "Earth";
+  src: url('../fonts/earthorbiter.ttf');
+}
+
+:root{
+  --first-theme-color: #036cb0; /*Lighter blue of the three*/
+  --second-theme-color: #035483;
+  --third-theme-color:  #033651; /*Darkest blue of the three*/
+  --font-theme-color: black;
+  --footer-color: #3d3d3d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Advent Pro', sans-serif;
+
+}
+
+body {
+/*background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(3,108,176,1) 77%, rgba(61,61,61,1) 95%);*/
+  background-color: var(--third-theme-color);
+
+}
+
+h1
+{
+  color: white;
+}
+h2 {
+  font-family: Earth, serif;
+}
+.gné {
+	font-family: 'Earth', sans-serif;
+	color: black;
+}
+/*---------------------------CARD---------------------------*/
+.card {
+  margin: 0 10px;
+	cursor: pointer;
+
+}
+.col-lg-4 {
+  margin: 0;
+  padding: 0;
+}
+
+.ctn-first .card img{
+  height: 100px;
+}
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+.col-left
+{
+  border: solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.metal
+{
+  margin-left: -50px;
+  margin-right: -50px;
+	padding: 5px;
+}
+@media all and (max-width:768px) {
+	.ctn-first, .ctn-second {
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+
+h3
+{
+  font-size: 1.2em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid white;
+    color: white;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: white;
+    content: '';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+/* CARDS COLOR */
+.card > [class^="RAL"] {
+	height: 100px;
+}
+.card.RAL1013 {
+	background-color: #e3d9c6;
+	height: 100px;
+}
+.card.RAL1015 {
+	background-color: #e6d2b5;
+}
+.card.RAL1034 {
+	background-color: #eb9c52;
+}
+.card.RAL1247 {
+	background-color: #49291a;
+}
+.card.RAL3012 {
+	background-color: #c6846d;
+}
+.card.RAL7015 {
+	background-color: #4f5358;
+}
+.card.RAL7016 {
+	background-color: #383e42;
+}
+.card.RAL7021 {
+	background-color: #2F3234;
+}
+.card.RAL7022 {
+	background-color: #4c4a44;
+}
+.card.RAL7031 {
+	background-color: #5B686D;
+}
+.card.RAL7035 {
+	background-color: #C5C7C4;
+}
+.card.RAL9001 {
+	background-color: #E9E0D2;
+}
+.card.RAL9005 {
+	background-color: #0E0E10;
+	height: 100px;
+}
+.card.RAL9006 {
+	background-color: #A1A1A0;
+}
+.card.RAL9010 {
+	background-color: #f1ece1;
+}
+.card.RAL9016 {
+	background-color: #F1F0EA;
+}
+.card.RAL9840 {
+	background-color: #2B1D10;
+}
+
+/*---------------------------ACCORDION---------------------------*/
+.twin
+{
+  border: solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.two
+{
+  background-color: white;
+}
+
+/*-----------------CHECKBOX------------------*/
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type="radio"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+
+/*-----------------RADIO------------------*/

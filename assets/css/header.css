@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+:root {
+  --first-theme-color: #036cb0; /*Lighter blue of the three*/
+  --second-theme-color: #035483;
+  --third-theme-color: #033651; /*Darkest blue of the three*/
+  --footer-color: #3d3d3d;
+}
+* {
+  font-family: 'Advent Pro', sans-serif;
+}
+.logo {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+}
+.dropdown-menu {
+  color: #212529;
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+}
+.dropdown-item {
+  margin-top: 0.25rem;
+  padding: 1rem 1.5rem;
+  color: #212529;
+  background-color: #f8f9fa;
+  border: 0;
+  font-size: 23px;
+}
+.dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+.nav-link {
+  font-size: 23px;
+  font-weight: 500;
+  color: black !important;
+  margin: 0 20px;
+  padding: 20px;
+}
+.nav-item a:hover {
+  background-color: var(--first-theme-color) !important;
+  color: white !important;
+}
+.navbar-toggler {
+  background-color: var(--first-theme-color);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+    color: blue;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
